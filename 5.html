@@ -26,10 +26,16 @@
             //console.log(hasil);
         }
         var teman=[];
-        skor(john);
-        skor(temanjohn);
-        skor(temanketiga);
-        
+        teman[0]=skor(john);
+        teman[1]=skor(temanjohn);
+        teman[2]=skor(temanketiga);
+        a=0;
+        for (i = 0; i< teman.length; i++) {
+            if(a<teman[i]){
+                a=teman[i];
+            }
+        }
+        console.log(a);
     </script>
 </body>
 </html>
