@@ -36,19 +36,18 @@
         console.log(skor(temanjohn));
         console.log(skor(temanketiga));
         var teman=[];
-        teman=[
-            [skor(john).jumlah,skor(john).name],
-            [skor(temanjohn).jumlah,skor(temanjohn).name],
-            [skor(temanketiga).jumlah,skor(temanketiga).name]
-        ];
+        teman[0]={data:skor(john)};
+        teman[1]={data:skor(temanjohn)};
+        teman[2]={data:skor(temanketiga)};
         a=0;
-        for (i = 0; i< teman.length; i++) {
-            tem=teman[i];
-            for (let index = 0; index < array.length; index++) {
-                
+        for(let key in teman){
+            // console.log(teman[key].data.jumlah);
+            if(a<teman[key].data.jumlah){
+                a=teman[key].data.jumlah;
+                b=teman[key].data.name;
             }
         }
-        console.log('Skor Tertinggi '+a);
+        console.log('Skor Tertinggi adalah '+b+' dengan skor '+a);
     </script>
 </body>
 </html>
