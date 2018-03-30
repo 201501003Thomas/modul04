@@ -10,21 +10,28 @@
     <!-- Nomor 5 -->
     <script>
         var john={
-            tinggi:100,
-            usia:8
+            tinggi:150,
+            usia:8,
+            nama:'John'
         };
         var temanjohn={
             tinggi:120,
-            usia:10
+            usia:10,
+            nama:'Teman John'
         }
         var temanketiga={
-            tinggi:120,
-            usia:10
+            tinggi:110,
+            usia:10,
+            nama:'Teman Ketiga John'
         }
         function skor(teman){
             hasil=teman.tinggi+teman.usia*5;
+            return hasil;
             //console.log(hasil);
         }
+        console.log(skor(john));
+        console.log(skor(temanjohn));
+        console.log(skor(temanketiga));
         var teman=[];
         teman[0]=skor(john);
         teman[1]=skor(temanjohn);
@@ -34,8 +41,9 @@
             if(a<teman[i]){
                 a=teman[i];
             }
+            // console.log(teman[i]);
         }
-        console.log(a);
+        console.log('Skor Tertinggi '+a);
     </script>
 </body>
 </html>
