@@ -26,22 +26,27 @@
         }
         function skor(teman){
             hasil=teman.tinggi+teman.usia*5;
-            return hasil;
+            return {
+                jumlah:hasil,
+                name:teman.nama
+            };
             //console.log(hasil);
         }
         console.log(skor(john));
         console.log(skor(temanjohn));
         console.log(skor(temanketiga));
         var teman=[];
-        teman[0]=skor(john);
-        teman[1]=skor(temanjohn);
-        teman[2]=skor(temanketiga);
+        teman=[
+            [skor(john).jumlah,skor(john).name],
+            [skor(temanjohn).jumlah,skor(temanjohn).name],
+            [skor(temanketiga).jumlah,skor(temanketiga).name]
+        ];
         a=0;
         for (i = 0; i< teman.length; i++) {
-            if(a<teman[i]){
-                a=teman[i];
+            tem=teman[i];
+            for (let index = 0; index < array.length; index++) {
+                
             }
-            // console.log(teman[i]);
         }
         console.log('Skor Tertinggi '+a);
     </script>
