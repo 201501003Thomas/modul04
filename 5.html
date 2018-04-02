@@ -16,8 +16,8 @@
             nama:'John'
         };
         var temanjohn={
-            tinggi:120,
-            usia:10,
+            tinggi:150,
+            usia:8,
             nama:'Teman John'
         }
         var temanketiga={
@@ -41,6 +41,7 @@
         teman[1]={data:skor(temanjohn)};
         teman[2]={data:skor(temanketiga)};
         a=0;
+        var c,d;
         //Bisa dynamic nantinya
         for(let key in teman){
             // console.log(teman[key].data.jumlah);
@@ -49,10 +50,19 @@
                 b=teman[key].data.name;
             }
             else if(a==teman[key].data.jumlah){
-
+                a=teman[key].data.jumlah;
+                c=teman[key].data.name;
             }
         }
-        console.log('Skor Tertinggi adalah '+b+' dengan skor '+a);
+        // console.log(c);
+        if(isNaN(c)){
+            d=' dan '+c;
+        }
+        else{
+            d='';
+        }
+        // console.log(d);
+        console.log('Skor Tertinggi adalah '+b+d+' dengan skor '+a);
     </script>
 </body>
 </html>
