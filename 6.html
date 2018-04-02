@@ -7,6 +7,23 @@
     <title>Nomor 6</title>
 </head>
 <body>
-    
+    <script>
+        var tahun=[1965,2008,1992];
+        var tf=[];
+        var thnow=new Date().getFullYear();
+        for(i=0;i<tahun.length;i++){
+            // console.log(tahun[i]);
+            umur=thnow-tahun[i];
+            if(umur>18){
+                tf[i]=true;
+            }
+            else{
+                tf[i]=false;
+            }
+            console.log(umur);
+        }
+        console.log(tahun);
+        console.log(tf);
+    </script>
 </body>
 </html>
