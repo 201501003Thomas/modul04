@@ -13,7 +13,7 @@
         var temanjohn=[];
         temanjohn[0]={tinggi:150,usia:8,nama:'John'};
         temanjohn[1]={tinggi:150,usia:8,nama:'Teman John'};
-        temanjohn[2]={tinggi:110,usia:10,nama:'Teman Ketiga John'};
+        temanjohn[2]={tinggi:150,usia:8,nama:'Teman Ketiga John'};
         function skor(tinggi,usia){
             hasil=tinggi+usia*5;
             return hasil;
@@ -22,7 +22,7 @@
         for(let key in temanjohn){
             temanjohn[key].skor=skor(temanjohn[key].tinggi,temanjohn[key].usia);
         }
-        // console.log(temanjohn);
+        console.log(temanjohn);
         a=0;
         //Bisa dynamic nantinya
         for(let key in temanjohn){
