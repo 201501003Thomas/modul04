@@ -51,18 +51,10 @@
             }
             else if(a==teman[key].data.jumlah){
                 a=teman[key].data.jumlah;
-                c=teman[key].data.name;
+                b=b+' dan '+teman[key].data.name;
             }
         }
-        // console.log(c);
-        if(c!=null){
-            d=' dan '+c;
-        }
-        else{
-            d='';
-        }
-        // console.log(d);
-        console.log('Skor Tertinggi adalah '+b+d+' dengan skor '+a);
+        console.log('Skor Tertinggi adalah '+b+' dengan skor '+a);
     </script>
 </body>
 </html>
