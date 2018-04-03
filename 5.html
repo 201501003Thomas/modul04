@@ -10,47 +10,29 @@
     <!-- Nomor 5 -->
     <!-- John and Friend -->
     <script>
-        var john={
-            tinggi:150,
-            usia:8,
-            nama:'John'
-        };
-        var temanjohn={
-            tinggi:150,
-            usia:8,
-            nama:'Teman John'
+        var temanjohn=[];
+        temanjohn[0]={tinggi:150,usia:8,nama:'John'};
+        temanjohn[1]={tinggi:150,usia:8,nama:'Teman John'};
+        temanjohn[2]={tinggi:110,usia:10,nama:'Teman Ketiga John'};
+        function skor(tinggi,usia){
+            hasil=tinggi+usia*5;
+            return hasil;
         }
-        var temanketiga={
-            tinggi:110,
-            usia:10,
-            nama:'Teman Ketiga John'
+        // console.log(temanjohn);
+        for(let key in temanjohn){
+            temanjohn[key].skor=skor(temanjohn[key].tinggi,temanjohn[key].usia);
         }
-        function skor(teman){
-            hasil=teman.tinggi+teman.usia*5;
-            return {
-                jumlah:hasil,
-                name:teman.nama
-            };
-            //console.log(hasil);
-        }
-        console.log(skor(john));
-        console.log(skor(temanjohn));
-        console.log(skor(temanketiga));
-        var teman=[];
-        teman[0]={data:skor(john)};
-        teman[1]={data:skor(temanjohn)};
-        teman[2]={data:skor(temanketiga)};
+        // console.log(temanjohn);
         a=0;
         //Bisa dynamic nantinya
-        for(let key in teman){
-            // console.log(teman[key].data.jumlah);
-            if(a<teman[key].data.jumlah){
-                a=teman[key].data.jumlah;
-                b=teman[key].data.name;
+        for(let key in temanjohn){
+            if(a<temanjohn[key].skor){
+                a=temanjohn[key].skor;
+                b=temanjohn[key].nama;
             }
-            else if(a==teman[key].data.jumlah){
-                a=teman[key].data.jumlah;
-                b=b+' dan '+teman[key].data.name;
+            else if(a==temanjohn[key].skor){
+                a=temanjohn[key].skor;
+                b=b+' dan '+temanjohn[key].nama;
             }
         }
         console.log('Skor Tertinggi adalah '+b+' dengan skor '+a);
